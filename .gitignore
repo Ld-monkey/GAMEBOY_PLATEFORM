@@ -1,5 +1,6 @@
 # Ignore executable
 *.exe
+*.ini
 
 # command and asset folder
 command/
