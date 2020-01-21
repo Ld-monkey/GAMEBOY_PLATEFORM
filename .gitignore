@@ -1,0 +1,16 @@
+# Ignore executable
+*.exe
+
+# command and asset folder
+command/
+asset/
+
+# In source folder to ignore some extentions.
+src/*.asm
+src/*.ihx
+src/*.rel
+src/*.lk
+src/*.sym
+src/*.lst
+src/*.map
+src/*.noi
