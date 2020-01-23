@@ -4,7 +4,8 @@
 
 # command and asset folder
 command/
-asset/
+asset/Player_notmove.png
+asset/img2gb/ 
 
 # In source folder to ignore some extentions.
 src/*.asm
