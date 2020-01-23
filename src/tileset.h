@@ -6,5 +6,8 @@
 extern const UINT8 TILESET[];
 #define TILESET_TILE_COUNT 5
 
+// Tile count of player.
+#define PLAYER_TILESET_TILE_COUNT 3
+
 
 #endif
