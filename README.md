@@ -1,7 +1,7 @@
 # GAMEBOY_PLATEFORM
 Simple plateform on gameboy.
 
-![PLATEFORM GB](/scrnshot/screenshot.bmp)
+![PLATEFORM GB](/scrnshot/screenshot.gif)
 
 
 ## Goals :
