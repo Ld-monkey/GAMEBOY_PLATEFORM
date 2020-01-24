@@ -5,6 +5,7 @@
 // Boolean.
 #define TRUE 1
 #define FALSE 0
+#define NONE 2
 
 // Egde border of screen. WIDHT = 160px, HEIGHT = 144px
 #define LIMIT_LEFT_EGDE 6
@@ -45,7 +46,8 @@ void main(void)
 
   //to move sprite void scroll_sprite(INT8 sprites, INT8 x, INT8 y);
 
-  INT8 loop_game = 1;
+  INT8 loop_game = TRUE;
+  INT8 is_jumping = NONE;
 
   // loop game
   while(loop_game == TRUE) {
@@ -66,7 +68,7 @@ void main(void)
       player_sprite_right_face_x = player_sprite_left_face_x + 8;
       move_sprite(0, player_sprite_left_face_x, player_y);
       move_sprite(1, player_sprite_right_face_x, player_y);
-    }else if (keys & J_LEFT) {
+    } else if (keys & J_LEFT) {
       //verified left edge of screen.
       if (player_x < LIMIT_LEFT_EGDE) {
         player_x = LIMIT_LEFT_EGDE;
@@ -78,9 +80,31 @@ void main(void)
       player_sprite_right_face_x = player_sprite_left_face_x + 8;
       move_sprite(0, player_sprite_left_face_x, player_y);
       move_sprite(1, player_sprite_right_face_x, player_y);
-    }else if (keys & J_START) {
+    } else if (keys & J_UP && is_jumping == NONE) {
+      // jump the player.
+      is_jumping = TRUE;
+    } else if (keys & J_START) {
       // quit game
       loop_game = FALSE;
     }
+
+    // Simple jump not optimised.
+    if (is_jumping == TRUE && player_y > 110) {
+      player_y -= 1;
+      move_sprite(0, player_sprite_left_face_x, player_y);
+      move_sprite(1, player_sprite_right_face_x, player_y);
+    } else if (player_y == 110) {
+      is_jumping = FALSE;
+    }
+    if (is_jumping == FALSE) {
+      player_y += 1;
+      move_sprite(0, player_sprite_left_face_x, player_y);
+      move_sprite(1, player_sprite_right_face_x, player_y);
+    }
+    if (player_y == 136) {
+      player_y = 136;
+      is_jumping = NONE;
+    }
+
   }
 }
