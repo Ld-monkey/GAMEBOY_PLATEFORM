@@ -8,4 +8,5 @@ Simple plateform on gameboy.
 
 - [x] Add player with tileset and place him.
 - [x] Move the player from left to right.
-- [ ] Stop the player at the edge of the screen.
+- [x] Stop the player at the edge of the screen.
+- [ ] Add physic to the player.
