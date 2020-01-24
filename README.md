@@ -7,4 +7,5 @@ Simple plateform on gameboy.
 ## Goals :
 
 - [x] Add player with tileset and place him.
-- [ ] Move the player from left to right.
+- [x] Move the player from left to right.
+- [ ] Stop the player at the edge of the screen.
