@@ -80,12 +80,14 @@ void main(void)
       player_sprite_right_face_x = player_sprite_left_face_x + 8;
       move_sprite(0, player_sprite_left_face_x, player_y);
       move_sprite(1, player_sprite_right_face_x, player_y);
-    } else if (keys & J_UP && is_jumping == NONE) {
-      // jump the player.
-      is_jumping = TRUE;
     } else if (keys & J_START) {
       // quit game
       loop_game = FALSE;
+    }
+    
+    if (keys & J_UP && is_jumping == NONE) {
+      // jump the player.
+      is_jumping = TRUE;
     }
 
     // Simple jump not optimised.
