@@ -10,3 +10,4 @@ Simple plateform on gameboy.
 - [x] Move the player from left to right.
 - [x] Stop the player at the edge of the screen.
 - [ ] Add physic to the player.
+- [ ] Add other plateform.

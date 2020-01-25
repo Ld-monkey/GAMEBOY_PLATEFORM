@@ -84,7 +84,7 @@ void main(void)
       // quit game
       loop_game = FALSE;
     }
-    
+
     if (keys & J_UP && is_jumping == NONE) {
       // jump the player.
       is_jumping = TRUE;
